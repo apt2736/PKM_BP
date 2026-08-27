@@ -1,0 +1,51 @@
+# VS Code and IDE files
+.vscode/*.db*
+.vscode/*.lock
+deploy/.vscode/*.db*
+deploy/.vscode/*.lock
+*.sublime-project
+*.sublime-workspace
+.idea/
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Compiled C binaries, shared libraries, and object files
+*.o
+*.so
+*.a
+*.dylib
+*.exe
+*.out
+debug_feats
+test_all_windows
+test_clean
+test_w0
+test_w1
+deploy/test_deploy
+deploy/predict_bp_example
+deploy/debug_test
+deploy/multi_test
+
+# ESP32 / Embedded firmware build outputs
+deploy/demo_bp_esp/build/
+
+# Scratch and temporary debug headers/files
+temp_*
+w0_test.h
+all_windows.h
+
+# Datasets and archives
+PPG_DATASET
+PPG_DATASET.rar
+*.zip
+*.rar
+*.tar*
+*.7z
+*.gz

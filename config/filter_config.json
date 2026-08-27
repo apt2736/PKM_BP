@@ -1,0 +1,48 @@
+{
+  "dataset": {
+    "original_fs": 1000.0,
+    "window_sec": 30
+  },
+  "downsampling": {
+    "target_fs": 100.0,
+    "decimation_factor": 10,
+    "method": "iir",
+    "zero_phase": true
+  },
+  "ppg_preprocessing": {
+    "bandpass_filter": {
+      "lowcut_hz": 0.2,
+      "highcut_hz": 10.0,
+      "order": 4,
+      "filter_type": "chebyshev2",
+      "stopband_attenuation_db": 30.0,
+      "zero_phase": true
+    },
+    "normalization": {
+      "method": "min_max",
+      "range": [0.0, 1.0]
+    }
+  },
+  "ecg_preprocessing": {
+    "target_fs": 100.0,
+    "bandpass_filter": {
+      "lowcut_hz": 0.5,
+      "highcut_hz": 35.0,
+      "order": 3,
+      "filter_type": "butterworth",
+      "zero_phase": true
+    },
+    "powerline_filter": {
+      "type": "notch",
+      "freq_hz": 50.0,
+      "quality_factor": 30.0,
+      "zero_phase": true,
+      "enabled": true
+    },
+    "qrs_detector": {
+      "method": "pan_tompkins",
+      "integration_window_ms": 120.0,
+      "min_rr_interval_ms": 350.0
+    }
+  }
+}
