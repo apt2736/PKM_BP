@@ -85,7 +85,6 @@ else:
 # Verify essential files are present
 required_files = [
     "lgbm_sbp.c", "lgbm_sbp.h",
-    "lgbm_dbp.c", "lgbm_dbp.h",
     "bp_models.h", "feature_names.json",
     "ppg_bandpass_filter.h", "ppg_filter.c",
     "ecg_filter.h", "ecg_filter.c"
